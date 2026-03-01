@@ -33,3 +33,54 @@
     background: #ccc;
     margin-right: 20px;
 }
+/* =========================
+   TABLET (hasta 992px)
+========================= */
+@media (max-width: 992px) {
+
+    .sidebar {
+        width: 35%;
+        padding: 25px;
+    }
+
+    .content {
+        width: 65%;
+        padding: 25px;
+    }
+
+    .img {
+        width: 160px;
+        height: 100px;
+    }
+}
+
+
+/* =========================
+   CELULAR (hasta 768px)
+========================= */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .proyecto {
+        flex-direction: column;
+    }
+
+    .img {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+}
