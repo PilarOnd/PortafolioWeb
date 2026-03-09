@@ -150,3 +150,38 @@
 .dark-mode .img{
     background:#555;
 }
+
+.menu{
+    display:flex;
+    justify-content:space-between;
+    margin-top:40px;
+}
+
+.menu-item{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:15px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu-item span{
+    font-size:40px;
+}
+
+.menu-item p{
+    margin-top:5px;
+}
+.menu-item:hover{
+    background:rgba(255,255,255,0.15);
+    transform:scale(1.05);
+}
+.menu-item{
+    cursor:pointer;
+}
+.activo{
+    border:2px solid white;
+}
