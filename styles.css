@@ -71,6 +71,14 @@
     background: #ccc;
     margin-right: 20px;
 }
+
+.seccion{
+    display:block;
+}
+
+.oculto{
+    display:none;
+}
 /* =========================
    TABLET
 ========================= */
@@ -121,4 +129,24 @@
         height: 180px;
         margin-bottom: 15px;
     }
+}
+
+/* =========================
+   CAMBIO DE TEMA
+========================= */
+.dark-mode{
+    background:#121212;
+    color:#e0e0e0;
+}
+
+.dark-mode .content{
+    background:#1e1e1e;
+}
+
+.dark-mode .sidebar{
+    background:#0f220f;
+}
+
+.dark-mode .img{
+    background:#555;
 }

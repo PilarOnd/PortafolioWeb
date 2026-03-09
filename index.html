@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Web</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -13,33 +14,97 @@
             <h3>PILAR ONDARZA</h3>
             <p>Sobre mí, breve descripción aquí.</p>
 
-            <nav>
-               <a href="#">Proyectos</a>
-               <a href="#">Experiencia</a>
-               <a href="#">Blog</a>
+            <nav class="menu">
+
+                <a href="#" id="btn-proyectos" class="menu-item">
+                    <span class="material-icons">laptop_mac</span>
+                    <p>Proyectos</p>
+                </a>
+            
+                <a href="#" id="btn-experiencia" class="menu-item">
+                    <span class="material-icons">work</span>
+                    <p>Experiencia</p>
+                </a>
+            
+                <a href="#" id="btn-blog" class="menu-item">
+                    <span class="material-icons">article</span>
+                    <p>Blog</p>
+                </a>
+            
             </nav>
+             <button id="btn-tema">Cambiar tema</button>
         </aside>
 
-    <main class="content">
-        <h2 style="text-align: center;">PROYECTOS DESTACADOS</h2>
+        <main class="content">
 
-        <section class="proyecto">
-            <div class="img"></div>
-            <div class="info">
-                <h3>PROYECTO 1</h3>
-                <p>Descripción breve del proyecto.</p>
-            </div>
-        </section>
+            <!-- PROYECTOS -->
+            <section id="proyectos" class="seccion">
+                <h2 style="text-align:center;">PROYECTOS DESTACADOS</h2>
+        
+                <section class="proyecto proyecto-card">
+                    <div class="img"></div>
+                    <div class="info">
+                        <h3>PROYECTO 1</h3>
+                        <p>Descripción breve del proyecto.</p>
 
-        <section class="proyecto">
-            <div class="img"></div>
-            <div class="info">
-                <h3>PROYECTO 2</h3>
-                <p>Descripción breve del proyecto.</p>
-            </div>
-        </section>
-    </main>
+                        <a href="https://github.com/PilarOnd/solicitudes.git" target="_blank">Ver en GitHub</a>
+                    </div>
+                </section>
+        
+                <section class="proyecto proyecto-card">
+                    <div class="img"></div>
+                    <div class="info">
+                        <h3>PROYECTO 2</h3>
+                        <p>Descripción breve del proyecto.</p>
+
+                        <a href="https://github.com/PilarOnd/solicitudes.git" target="_blank">Ver en GitHub</a>
+
+                    </div>
+                </section>
+            </section>
+        
+        
+            <!-- EXPERIENCIA -->
+            <section id="experiencia" class="seccion oculto">
+        
+                <h2>SOBRE MÍ</h2>
+                <p>Lorem ipsum dolor sit amet...</p>
+        
+                <h2>EXPERIENCIA</h2>
+                <p>Lorem ipsum dolor sit amet...</p>
+        
+                <h2>HABILIDADES</h2>
+                <p>Lorem ipsum dolor sit amet...</p>
+        
+            </section>
+        
+        
+            <!-- BLOG -->
+            <section id="blog" class="seccion oculto">
+        
+                <h2 style="text-align:center;">BLOG PERSONAL</h2>
+        
+                <section class="proyecto">
+                    <div class="img"></div>
+                    <div class="info">
+                        <h3>BLOG 1</h3>
+                        <p>Descripción del blog.</p>
+                    </div>
+                </section>
+        
+                <section class="proyecto">
+                    <div class="img"></div>
+                    <div class="info">
+                        <h3>BLOG 2</h3>
+                        <p>Descripción del blog.</p>
+                    </div>
+                </section>
+        
+            </section>
+        
+        </main>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
