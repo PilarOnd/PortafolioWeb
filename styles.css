@@ -1,192 +1,221 @@
+/* Selector universal: aplica a todos los elementos de la página */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;              /* Elimina el margen por defecto del navegador */
+    padding: 0;             /* Elimina el relleno por defecto del navegador */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto del elemento */
 }
 
+/* Estilos del cuerpo de la página */
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif; /* Fuente tipográfica de todo el sitio */
 }
 
+/* Contenedor principal que envuelve sidebar y contenido */
 .container {
-    display: flex;
-    height: 100vh;
+    display: flex;   /* Activa flexbox para colocar elementos en fila */
+    height: 100vh;   /* Ocupa el 100% de la altura de la ventana del navegador */
 }
 
+/* Panel lateral izquierdo */
 .sidebar {
-    width: 30%;
-    background: #1f3b1f;
-    color: white;
-    padding: 60px 40px; /* espacio interno */
-    display: flex;
-    flex-direction: column;
+    width: 30%;              /* Ocupa el 30% del ancho del contenedor */
+    background: #1f3b1f;     /* Fondo verde oscuro */
+    color: white;            /* Color del texto */
+    padding: 25px 30px;      /* Espacio interno: 25px arriba/abajo, 30px izquierda/derecha */
+    display: flex;           /* Activa flexbox para apilar elementos verticalmente */
+    flex-direction: column;  /* Los hijos se apilan en columna (uno debajo del otro) */
 }
 
-/* TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL (ej: "PORTAFOLIO WEB") */
 .sidebar h1 {
-    font-size: 28px;
-    margin: 30px 0;
-    letter-spacing: 2px;
+    font-size: 28px;         /* Tamaño de la letra */
+    margin: 10px 0 8px;      /* Espacio: 10px arriba, 8px abajo */
+    letter-spacing: 2px;     /* Separación entre letras */
 }
 
-/* NOMBRE */
+/* NOMBRE (ej: "PILAR ONDARZA BANEGAS") */
 .sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 30px;
-    font-weight: normal;
-    opacity: 0.9;
+    font-size: 16px;         /* Tamaño de la letra */
+    margin-bottom: 12px;     /* Espacio debajo del nombre */
+    font-weight: normal;     /* Grosor de la letra normal (no negrita) */
+    opacity: 0.9;            /* Ligera transparencia (90% opaco) */
 }
 
-/* DESCRIPCIÓN (solo el p principal, no los del menú) */
+/* DESCRIPCIÓN (el párrafo principal del sidebar, no los del menú) */
 .sidebar > p {
-    margin-bottom: 40px;
-    line-height: 1.6;
-    border-left: 3px solid #d4af37;
-    padding-left: 15px; /* modelo de caja */
+    margin-bottom: 16px;     /* Espacio debajo de la descripción */
+    line-height: 1.5;        /* Altura entre líneas del texto */
+    font-size: 14px;         /* Tamaño de la letra */
 }
 
-/* MENÚ */
+/* MENÚ DE NAVEGACIÓN del sidebar */
 .sidebar nav {
-    margin-top: 20px;
-    display: flex;
-    gap: 48px;
+    margin-top: 12px;        /* Espacio arriba del menú */
+    display: flex;           /* Coloca los enlaces en fila horizontal */
+    gap: 48px;               /* Espacio entre cada enlace del menú */
 }
 
+/* Enlaces dentro del menú del sidebar */
 .sidebar nav a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 0;
+    text-decoration: none;   /* Quita el subrayado de los enlaces */
+    color: white;            /* Color del texto */
+    padding: 5px 0;          /* Relleno arriba/abajo de cada enlace */
 }
 
+/* Área de contenido principal (derecha) */
 .content {
-    width: 70%;
-    padding: 40px;
-    background: #f5f5f5;
+    width: 70%;              /* Ocupa el 70% del ancho del contenedor */
+    padding: 40px;           /* Espacio interno en todos los lados */
+    background: #f5f5f5;     /* Fondo gris claro */
 }
 
+/* Cada tarjeta de proyecto */
 .proyecto {
-    display: flex;
-    margin-top: 30px;
+    display: flex;           /* Coloca imagen e info en fila */
+    margin-top: 30px;        /* Espacio entre cada proyecto */
 }
 
+/* Contenedor de la imagen del proyecto */
 .img {
-    width: 200px;
-    height: 120px;
-    background: #ccc;
-    margin-right: 20px;
+    width: 200px;            /* Ancho fijo */
+    height: 120px;           /* Alto fijo */
+    background: #ccc;        /* Fondo gris (placeholder si no hay imagen) */
+    margin-right: 20px;      /* Espacio entre imagen y texto */
 }
 
-.seccion{
-    display:block;
+/* Secciones del contenido (Proyectos, Experiencia, Blog) */
+.seccion {
+    display: block;          /* Muestra la sección como bloque */
 }
 
-.oculto{
-    display:none;
+/* Oculta secciones que no están activas */
+.oculto {
+    display: none;           /* No muestra el elemento en pantalla */
 }
+
 /* =========================
-   TABLET
+   TABLET - pantallas de hasta 992px
 ========================= */
 @media (max-width: 992px) {
 
     .sidebar {
-        width: 35%;
-        padding: 25px;
+        width: 35%;          /* Sidebar más ancho en tablet */
+        padding: 25px;       /* Menos padding */
     }
 
     .content {
-        width: 65%;
+        width: 65%;          /* Contenido un poco más estrecho */
         padding: 25px;
     }
 
     .img {
-        width: 160px;
+        width: 160px;        /* Imágenes más pequeñas */
         height: 100px;
     }
 }
 
 
 /* =========================
-   CELULAR
+   CELULAR - pantallas de hasta 768px
 ========================= */
 @media (max-width: 768px) {
 
     .container {
-        flex-direction: column;
-        height: auto;
+        flex-direction: column;  /* Sidebar arriba, contenido abajo */
+        height: auto;            /* Altura automática (sin altura fija) */
     }
 
     .sidebar {
-        width: 100%;
-        text-align: center;
+        width: 100%;            /* Sidebar ocupa todo el ancho */
+        text-align: center;     /* Texto centrado */
     }
 
     .content {
-        width: 100%;
+        width: 100%;            /* Contenido ocupa todo el ancho */
     }
 
     .proyecto {
-        flex-direction: column;
+        flex-direction: column; /* Imagen arriba, texto abajo */
     }
 
     .img {
-        width: 100%;
-        height: 180px;
-        margin-bottom: 15px;
+        width: 100%;            /* Imagen a ancho completo */
+        height: 180px;          /* Altura fija */
+        margin-bottom: 15px;    /* Espacio debajo de la imagen */
     }
 }
 
 /* =========================
-   CAMBIO DE TEMA
+   CAMBIO DE TEMA - modo oscuro
 ========================= */
-.dark-mode{
-    background:#121212;
-    color:#e0e0e0;
+/* Estilos cuando se activa el modo oscuro en body */
+.dark-mode {
+    background: #121212;    /* Fondo negro oscuro */
+    color: #e0e0e0;        /* Texto gris claro */
 }
 
-.dark-mode .content{
-    background:#1e1e1e;
+/* Área de contenido en modo oscuro */
+.dark-mode .content {
+    background: #1e1e1e;   /* Fondo gris muy oscuro */
 }
 
-.dark-mode .sidebar{
-    background:#0f220f;
+/* Sidebar en modo oscuro */
+.dark-mode .sidebar {
+    background: #0f220f;   /* Verde más oscuro */
 }
 
-.dark-mode .img{
-    background:#555;
+/* Imágenes placeholder en modo oscuro */
+.dark-mode .img {
+    background: #555;      /* Gris oscuro */
 }
 
-.menu{
-    display:flex;
-    justify-content:center;
-    gap: 24px;
-    margin-top:40px;
+/* Menú con iconos (Proyectos, Experiencia, Blog) */
+.menu {
+    display: flex;             /* Coloca items en fila */
+    justify-content: center;   /* Centra los items horizontalmente */
+    gap: 24px;                 /* Espacio entre cada item del menú */
+    margin-top: 12px;          /* Espacio arriba del menú */
 }
 
-.menu-item{
-    text-decoration:none;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:15px;
-    border-radius:10px;
-    transition:0.3s;
+/* Cada item del menú (icono + texto) */
+.menu-item {
+    text-decoration: none;     /* Sin subrayado */
+    color: white;              /* Texto blanco */
+    display: flex;             /* Flexbox para apilar icono y texto */
+    flex-direction: column;    /* Icono arriba, texto abajo */
+    align-items: center;       /* Centra icono y texto */
+    padding: 15px;             /* Relleno alrededor del item */
+    border-radius: 10px;       /* Esquinas redondeadas */
+    transition: 0.3s;          /* Animación suave al hacer hover */
 }
 
-.menu-item span{
-    font-size:40px;
+/* Icono Material Icons dentro del menú */
+.menu-item span {
+    font-size: 40px;           /* Tamaño grande del icono */
 }
 
-.menu-item p{
-    margin-top:5px;
+/* Texto debajo del icono (ej: "Proyectos") */
+.menu-item p {
+    margin-top: 5px;           /* Pequeño espacio entre icono y texto */
 }
-.menu-item:hover{
-    background:rgba(255,255,255,0.15);
-    transform:scale(1.05);
+
+/* Efecto al pasar el mouse sobre un item del menú */
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.15);  /* Fondo blanco semi-transparente */
+    transform: scale(1.05);                  /* Aumenta ligeramente el tamaño */
 }
-.menu-item{
-    cursor:pointer;
+
+/* Cursor de mano al pasar sobre items del menú */
+.menu-item {
+    cursor: pointer;           /* Indica que es clickeable */
 }
-.activo{
-    border:2px solid white;
+
+/* Item del menú actualmente seleccionado */
+.activo {
+    border: 2px solid white;   /* Borde blanco para resaltarlo */
+}
+
+/* Botón para cambiar entre tema claro y oscuro */
+#btn-tema {
+    margin-top: 16px;          /* Espacio arriba del botón */
 }
