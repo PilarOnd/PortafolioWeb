@@ -14,26 +14,35 @@ function ocultarTodo(){
     seccionBlog.classList.add("oculto");
 }
 
-btnProyectos.addEventListener("click", function(){
+function quitarActivo(){
+    btnProyectos.classList.remove("activo");
+    btnExperiencia.classList.remove("activo");
+    btnBlog.classList.remove("activo");
+}
 
+btnProyectos.addEventListener("click", function(){
     ocultarTodo();
     seccionProyectos.classList.remove("oculto");
-
+    quitarActivo();
+    btnProyectos.classList.add("activo");
 });
 
 btnExperiencia.addEventListener("click", function(){
-
     ocultarTodo();
     seccionExperiencia.classList.remove("oculto");
-
+    quitarActivo();
+    btnExperiencia.classList.add("activo");
 });
 
 btnBlog.addEventListener("click", function(){
-
     ocultarTodo();
     seccionBlog.classList.remove("oculto");
-
+    quitarActivo();
+    btnBlog.classList.add("activo");
 });
+
+// Al cargar la página, "Proyectos" está activo (es la sección visible por defecto)
+btnProyectos.classList.add("activo");
 
 // CAMBIO DE TEMA
 const botonTema = document.getElementById("btn-tema");
